@@ -1,0 +1,17 @@
+const std = @import("std");
+
+pub fn sumOfNaturalNumbers(number: usize) usize {
+    return (number * (number + 1)) / 2;
+}
+
+pub fn squareOfSum(number: usize) usize {
+    return std.math.pow(usize, sumOfNaturalNumbers(number), 2);
+}
+
+pub fn sumOfSquares(number: usize) usize {
+    return (number * (number + 1) * ((2 * number) + 1)) / 6;
+}
+
+pub fn differenceOfSquares(number: usize) usize {
+    return squareOfSum(number) - sumOfSquares(number);
+}
